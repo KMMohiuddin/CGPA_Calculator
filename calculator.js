@@ -12,7 +12,7 @@ const course_name = `
       <option class="credit-CREDITs" value="2">2</option>
       <option class="credit-CREDITs" value="1">1</option>
     </select>
-    <select class="grade key-${counter}" required>
+    <select class="grade id="SGPA" key-${counter}" required>
       <option class="grade" value="select">SGPA</option>
       <option class="grade" value="4.0">4.0</option>
       <option class="grade" value="3.75">3.75</option>
@@ -39,5 +39,9 @@ document.querySelector("form.add_new").remove();
 const reports = [];
 
 function calcCgpa() {
+
+  var sgpa =parseFloat(document.getElementById("SGPA").value);
+  var credit =parseFloat(document.getElementById("credit").value);
+  document.getElementById("calc-cgpa").innerHTML = sgpa+credit ;
 
 }
