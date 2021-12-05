@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="calculator.js"></script>
+  </head>
+
+  <body>
+<div class="container">
+  <h1><b>CGPA CALCULATOR</b></h1>
+
+  <div class="container" id="courses">
+    <form class="key-0">
+        <input type="text" placeholder="Course Code" class="courses key-0" required/>
+        <select class="credit-units key-0" required>
+          <option class="credit-units" value="select">credit-units</option>
+          <option class="credit-units" value="4">4</option>
+          <option class="credit-units" value="3">3</option>
+          <option class="credit-units" value="2">2</option>
+          <option class="credit-units" value="1">1</option>
+        </select>
+        <select class="grade key-0" required>
+          <option class="grade" value="select">SGPA</option>
+          <option class="grade" value="4.0">4.0</option>
+          <option class="grade" value="3.75">3.75</option>
+          <option class="grade" value="3.5">3.5</option>
+          <option class="grade" value="3.25">3.25</option>
+          <option class="grade" value="3.0">3.0</option>
+          <option class="grade" value="2.75">2.75</option>
+          <option class="grade" value="2.5">2.5</option>
+          <option class="grade" value="2.25">2.25</option>
+          <option class="grade" value="2.0">2.0</option>
+          <option class="grade" value="0">F</option>
+        </select>
+    </form>
+  </div>
+
+  <div class="btn">
+    <button onclick="addCourse()">+ Add Course</button>
+    <button onclick="removeCourse()">- Remove Course</button>
+    <button onclick="calcCgpa()">Calculate CGPA</button>
+  </div>
+  <div class="calculation">
+    <p id="calc-cgpa">Your CGPA is:</p>
+  </div>
+  </div>
+  </body>
+</html>
