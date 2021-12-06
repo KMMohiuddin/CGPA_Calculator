@@ -5,12 +5,12 @@ addNew.classList.add("add_new", `key-${counter}`);
 const course_name = `
 <form class="add_new key-${counter}">
     <input type="text" placeholder="Course Code" class="courses key-${counter}" required/>
-    <select class="credit-CREDITs key-${counter}" required>
-      <option class="credit-CREDITs" value="select">credit-CREDITs</option>
-      <option class="credit-CREDITs" value="4">4</option>
-      <option class="credit-CREDITs" value="3">3</option>
-      <option class="credit-CREDITs" value="2">2</option>
-      <option class="credit-CREDITs" value="1">1</option>
+    <select class="credit key-${counter}" required>
+      <option class="credit" value="select">credit</option>
+      <option class="credit" value="4">4</option>
+      <option class="credit" value="3">3</option>
+      <option class="credit" value="2">2</option>
+      <option class="credit" value="1">1</option>
     </select>
     <select class="grade id="SGPA" key-${counter}" required>
       <option class="grade" value="select">SGPA</option>
