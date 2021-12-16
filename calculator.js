@@ -1,4 +1,5 @@
-let counter = 1;
+let counter = 0;
+const listOfCounter = [];
 function addCourse() {
   let addNew = document.createElement("form");
   addNew.classList.add("add_new", `key-${counter}`);
@@ -29,11 +30,14 @@ function addCourse() {
 `;
   addNew.innerHTML = course_name;
   document.getElementById("courses").appendChild(addNew);
+  listOfCounter.push(counter);
   counter++;
 }
 
 function removeCourse() {
   document.querySelector("form.add_new").remove();
+  listOfCounter.pop(counter);
+  counter--;
 }
 
 const reports = [];
@@ -48,8 +52,8 @@ function calcCgpaa() {
   let totalSgpa = 0;
   let totalCredit = 0;
   var multiply = 0;
-  let CourseCredit= 0;
-  let CourseSgpa =0;
+  let CourseCredit = 0;
+  let CourseSgpa = 0;
   credit.forEach((e) => {
     CourseCredit = parseFloat(e.value);
     totalCredit += CourseCredit;
@@ -63,25 +67,24 @@ function calcCgpaa() {
   });
 
   for (let i = 0; i < counter; i++) {
-    multiply += listOfSgpa[i]*listOfCredit[i] ;
+    multiply += listOfSgpa[i] * listOfCredit[i];
   }
 
-  document.getElementById("calc-cgpa").innerHTML = "YOUR CGPA IS: "+(multiply / totalCredit).toFixed( 2 );
-  console.log("list of credit " +listOfCredit);
-  console.log("list Of Sgpa "+listOfSgpa);
-  console.log("sgpa * credit"+sgpa * credit);
-  console.log("counter"+counter);
-  console.log("totalCredit"+totalCredit);
-  console.log("totalSgpa"+totalSgpa);
-  console.log("multiply value"+multiply);
+  document.getElementById("calc-cgpa").innerHTML =
+    "YOUR CGPA IS: " + (multiply / totalCredit).toFixed(2);
+  console.log("list of credit " + listOfCredit);
+  console.log("list Of Sgpa " + listOfSgpa);
+  console.log("sgpa * credit" + sgpa * credit);
+  console.log("counter :" + counter);
+  console.log("Number of counter :" + listOfCounter);
+  console.log("totalCredit" + totalCredit);
+  console.log("totalSgpa" + totalSgpa);
+  console.log("multiply value" + multiply);
 
-
-
-/*
+  /*
   document.getElementById("calc-cgpa").innerHTML = sgpa * credit;
   document.getElementById("Counter").innerHTML = counter;
   document.getElementById("totalUnit").innerHTML = totalCredit;
   document.getElementById("totalSgpa").innerHTML = totalSgpa;
   document.getElementById("multiply").innerHTML = multiply;*/
-
 }
