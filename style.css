@@ -5,9 +5,8 @@
   font-family: sans-serif;
 }
 
-
 body {
-  background-image: linear-gradient(to right, #66ccff ,#66ff66);
+  background-image: linear-gradient(to right, #66ccff, #66ff66);
   color: white;
 }
 h1 {
@@ -23,19 +22,20 @@ h1:hover {
   text-align: center;
   color: #000;
 }
-p{
+p {
   padding: 20px;
   font-size: 1rem;
   color: black;
 }
 
- form {
+form {
   color: black;
   padding-left: 10px;
   margin: 5px auto;
   text-align: center;
 }
-input,select{
+input,
+select {
   border: none;
   padding: 15px;
   margin: 10px;
@@ -43,10 +43,8 @@ input,select{
   text-align: center;
 }
 
-
 .btn {
   display: flex;
-  margin: 5px auto;
 }
 
 .calculation p {
