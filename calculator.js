@@ -1,5 +1,4 @@
 let counter = 0;
-const listOfCounter = [];
 function addCourse() {
   let addNew = document.createElement("form");
   addNew.classList.add("add_new", `key-${counter}`);
@@ -30,13 +29,11 @@ function addCourse() {
 `;
   addNew.innerHTML = course_name;
   document.getElementById("courses").appendChild(addNew);
-  listOfCounter.push(counter);
   counter++;
 }
 
 function removeCourse() {
   document.querySelector("form.add_new").remove();
-  listOfCounter.pop(counter);
   counter--;
 }
 
@@ -76,7 +73,6 @@ function calcCgpaa() {
   console.log("list Of Sgpa " + listOfSgpa);
   console.log("sgpa * credit" + sgpa * credit);
   console.log("counter :" + counter);
-  console.log("Number of counter :" + listOfCounter);
   console.log("totalCredit" + totalCredit);
   console.log("totalSgpa" + totalSgpa);
   console.log("multiply value" + multiply);
@@ -86,5 +82,6 @@ function calcCgpaa() {
   document.getElementById("Counter").innerHTML = counter;
   document.getElementById("totalUnit").innerHTML = totalCredit;
   document.getElementById("totalSgpa").innerHTML = totalSgpa;
-  document.getElementById("multiply").innerHTML = multiply;*/
+  document.getElementById("multiply").innerHTML = multiply;
+  */
 }
